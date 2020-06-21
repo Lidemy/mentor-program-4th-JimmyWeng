@@ -26,8 +26,18 @@
 * 點選 compare & pull request
 * create pull request 一直搞不懂為什麼我已經 push 了還要 pull，看了[這篇](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests)才意識到，我其實是從 local 端把我的東西 push 到我的遠端 repo，接著要去跟 huli 的遠端 repo 要求 pull request。節錄：Pull requests let you tell others about changes you've pushed to a branch in a repository on GitHub. Once a pull request is opened, you can discuss and review the potential changes with collaborators and add follow-up commits before your changes are merged into the base branch.
 * 接著要看自我檢測，等等看完自我檢測繼續完成後面步驟。
+* 接著把 PR 連結（裡面有/pull/的網址）複製起來去學習系統繳交給助教改
+
+接下來的還沒發生
+
+* 等作業改完並 merge
+* 切換回去 master
+* 使用 git pull origin master 把最新版本更新
+* 使用 git branch -d week1 刪除 week1 
+
 
 #### 問題請教
 
-1. 剛剛才意識到是不是應該每個作業都開一個 branch 比較好？有什麼原因嗎？
+1. 剛剛才意識到是不是應該每個作業都開一個 branch 比較好？有什麼原因嗎？還是 week1 開一個 branch 也可以？
 2. 使用 vim 直接在 iTerm 裡面寫好像不是特別方便（例如切換 md 觀看），有推薦的做法嗎？(例如是不是應該用某個 IDE 寫？)
+3. 最後 branch 可以留著嗎？還是都建議刪除？
