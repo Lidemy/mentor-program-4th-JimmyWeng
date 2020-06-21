@@ -39,5 +39,6 @@
 #### 問題請教
 
 1. 剛剛才意識到是不是應該每個作業都開一個 branch 比較好？有什麼原因嗎？還是 week1 開一個 branch 也可以？
+更新：剛重新回去看 huli 的影片看懂了。因為遠端的 master merge 新 push 的 branch ，而我們在 local pull 新的 master 同步後，local 端就不需要這個 branch 了。
 2. 使用 vim 直接在 iTerm 裡面寫好像不是特別方便（例如切換 md 觀看），有推薦的做法嗎？(例如是不是應該用某個 IDE 寫？)
 3. 最後 branch 可以留著嗎？還是都建議刪除？
