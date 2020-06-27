@@ -10,7 +10,7 @@
 後端就是 server-side ，是使用者看不到在 server 上各種行為，例如儲存資料和 API 呼叫。
 後端的實作常見的有 PHP, Python, Java, . Net, Ruby... 等等。
 
-## 假設我今天去 Google 首頁搜尋框打上：JavaScri[t 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
+## 假設我今天去 Google 首頁搜尋框打上：JavaScript 並且按下 Enter，請說出從這一刻開始到我看到搜尋結果為止發生在背後的事情。
 
  - [ ] P1 你能說出從發出一個 request 到接收 response 中間發生的事
  - [ ] P1 你了解不同載具的差異在哪（Desktop、Mobile、Web）
