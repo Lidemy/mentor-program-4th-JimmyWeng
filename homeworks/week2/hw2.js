@@ -6,4 +6,12 @@ function capitalize(str) {
   }
 }
 
-console.log(capitalize('hello'));
+// console.log(capitalize('hello'))
+// console.log(capitalize('nick'))
+// 正確回傳值：Nick
+
+// console.log(capitalize('Nick'))
+// 正確回傳值：Nick
+
+// console.log(capitalize(',hello'))
+// 正確回傳值：, hello
