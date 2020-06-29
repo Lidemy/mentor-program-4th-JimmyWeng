@@ -24,3 +24,9 @@ function repeat(str, times) {
 // console.log(repeat('a', 5)) //正確回傳值：aaaaa
 // console.log(repeat('yoyo', 2)) //正確回傳值：yoyoyoyo
 
+
+// console.log(join([1, 2, 3], '')) // 正確回傳值：123
+// console.log(join(["a", "b", "c"], "!")) // 正確回傳值：a!b!c
+// console.log(join(["aaa", "bb", "c", "dddd"], ',,')) // 正確回傳值：aaa,,bb,,c,,dddd
+
+
