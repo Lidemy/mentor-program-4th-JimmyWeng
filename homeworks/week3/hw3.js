@@ -10,44 +10,37 @@ Output
 （附註：Composite 是合數的意思，不過有一點要注意的是 1 不是質數也不是合數，但在這一題裡面一樣要輸出Composite）
 */
 
-var readline = require('readline');
-const { type } = require('os');
-
-var rl = readline.createInterface({
-  input: process.stdin
+const readline = require('readline');
+// const { type } = require('os');
+const lines = [];
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+rl.on('line', line => lines.push(line));
 
-rl.on('line', function (line) {
-  lines.push(line)
-});
-
-rl.on('close', function (line) {
-  solve(lines)
-});
-
-const solve = lines => {
-  // var tmp = lines[0].split(' ')
-  var number_counts = lines[0]
-  for (let i = 1; i <= number_counts; i += 1) {
-    console.log(isComp(lines[i]))
-  }
-
-}
-
-const isComp = num => {
-  let n = Number(num)
+function isComp(num) {
+  const n = Number(num);
   if (n === 1) {
-    return 'Composite'
+    return 'Composite';
   }
   if (n === 2) {
-    return 'Prime'
+    return 'Prime';
   }
   for (let i = 2; i < n; i += 1) {
     if (n % i === 0) {
-      return 'Composite'
+      return 'Composite';
     }
   }
-  return 'Prime'
+  return 'Prime';
 }
+
+function solve(object) {
+  // var tmp = object[0].split(' ')
+  const numberCounts = object[0];
+  for (let i = 1; i <= numberCounts; i += 1) {
+    console.log(isComp(object[i]));
+  }
+}
+
+rl.on('close', () => solve(lines));
