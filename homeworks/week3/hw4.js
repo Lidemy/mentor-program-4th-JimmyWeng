@@ -1,26 +1,18 @@
-var readline = require('readline');
-const { type } = require('os');
+const readline = require('readline');
 
-var rl = readline.createInterface({
-  input: process.stdin
+const lines = [];
+const rl = readline.createInterface({
+  input: process.stdin,
 });
 
-var lines = []
+rl.on('line', line => lines.push(line));
 
-rl.on('line', function (line) {
-  lines.push(line)
-});
-
-rl.on('close', function (line) {
-  solve(lines)
-});
-
-const solve = lines => {
-  // var tmp = lines[0].split(' ')
-  let str = lines[0]
-  let rev_str = ''
+function solve(object) {
+  // var tmp = object[0].split(' ')
+  const str = object[0];
+  let revStr = '';
   for (let i = (str.length - 1); i >= 0; i -= 1) {
-    rev_str += str[i]
+    revStr += str[i];
   }
   // console.log('typeof lines: ' + typeof lines)
   // console.log('typeof rev_str: ' + typeof rev_str)
@@ -30,12 +22,13 @@ const solve = lines => {
   // console.log('rev_str = ' + rev_str.toString())
   // console.log('str = ' + str.toString())
   // console.log(rev_str.toString === str.toString)
-  // console.log(rev_str === str) // doesn't work because 
-  if (rev_str === str) {
-    console.log('True')
+  // console.log(rev_str === str) // doesn't work because
+  if (revStr === str) {
+    console.log('True');
   } else {
-    console.log('False')
+    console.log('False');
   }
-
   // console.log(rev_str === str)
 }
+
+rl.on('close', () => solve(lines));
