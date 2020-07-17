@@ -33,6 +33,7 @@ request(
   },
 );
 
-// 請問助教 headers 為什麼有時候用 [ ] 有時候用 { }？ 是因為 String 跟 Object 差異嗎？
+// 希望可以跟助教請教：
+// 請問 headers 為什麼有時候用 [ ] 有時候用 { }？ 是因為 String 跟 Object 差異嗎？
 // [ ] 範例： https://github.com/request/request#support-for-har-12
 // 請問助教 headers 為什麼不能使用 limit，是我用錯方式了嗎？
