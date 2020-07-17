@@ -10,12 +10,16 @@ request(
     // console.log('body:', body);
     // console.log(body);
     // console.log(typeof body);
-    const bodyParse = JSON.parse(body);
-    const count = 10;
-    // for (let i = 0; i < bodyParse.length; i += 1) {
-    for (let i = 0; i < count; i += 1) {
-      console.log(`${bodyParse[i].id} ${bodyParse[i].name}`);
-      // console.log(bodyParse[i])
+    try {
+      const bodyParse = JSON.parse(body);
+      const count = 10;
+      // for (let i = 0; i < bodyParse.length; i += 1) {
+      for (let i = 0; i < count; i += 1) {
+        console.log(`${bodyParse[i].id} ${bodyParse[i].name}`);
+        // console.log(bodyParse[i])
+      }
+    } catch (e) {
+      console.log(e); // 錯誤處理
     }
   },
 );

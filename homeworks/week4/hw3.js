@@ -36,26 +36,30 @@ const countryName0 = process.argv[2];
 request(
   `https://restcountries.eu/rest/v2/name/${countryName0}?fields=name;capital;currencies;callingCodes`,
   (error, response, body) => {
-    const bodyParse = JSON.parse(body);
-    if (bodyParse.status === 404) {
-      console.log('「找不到國家資訊」');
-    } else {
-      console.log('============');
-      // console.log(bodyParse[0]);
-      console.log(`國家：${bodyParse[0].name}`);
-      console.log(`首都：${bodyParse[0].capital}`);
-      console.log(`貨幣：${bodyParse[0].currencies[0].code}`);
-      console.log(`國碼：${bodyParse[0].callingCodes[0]}`);
-      console.log('============');
-      console.log(`國家：${bodyParse[1].name}`);
-      console.log(`首都：${bodyParse[1].capital}`);
-      console.log(`貨幣：${bodyParse[1].currencies[0].code}`);
-      console.log(`國碼：${bodyParse[1].callingCodes[0]}`);
-      console.log('============');
-      console.log(`國家：${bodyParse[2].name}`);
-      console.log(`首都：${bodyParse[2].capital}`);
-      console.log(`貨幣：${bodyParse[2].currencies[0].code}`);
-      console.log(`國碼：${bodyParse[2].callingCodes[0]}`);
+    try {
+      const bodyParse = JSON.parse(body);
+      if (bodyParse.status === 404) {
+        console.log('「找不到國家資訊」');
+      } else {
+        console.log('============');
+        // console.log(bodyParse[0]);
+        console.log(`國家：${bodyParse[0].name}`);
+        console.log(`首都：${bodyParse[0].capital}`);
+        console.log(`貨幣：${bodyParse[0].currencies[0].code}`);
+        console.log(`國碼：${bodyParse[0].callingCodes[0]}`);
+        console.log('============');
+        console.log(`國家：${bodyParse[1].name}`);
+        console.log(`首都：${bodyParse[1].capital}`);
+        console.log(`貨幣：${bodyParse[1].currencies[0].code}`);
+        console.log(`國碼：${bodyParse[1].callingCodes[0]}`);
+        console.log('============');
+        console.log(`國家：${bodyParse[2].name}`);
+        console.log(`首都：${bodyParse[2].capital}`);
+        console.log(`貨幣：${bodyParse[2].currencies[0].code}`);
+        console.log(`國碼：${bodyParse[2].callingCodes[0]}`);
+      }
+    } catch (e) {
+      console.log(e); // 錯誤處理
     }
   },
 );

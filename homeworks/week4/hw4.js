@@ -25,11 +25,15 @@ request(
     },
   },
   (error, response, body) => {
-    const bodyParse = JSON.parse(body);
-    // console.log(response);
-    // console.log(bodyParse.top);
-    const info = bodyParse.top;
-    info.forEach(element => console.log(`${element.viewers} ${element.game.name}`)); // this is an array so iteration
+    try {
+      const bodyParse = JSON.parse(body);
+      // console.log(response);
+      // console.log(bodyParse.top);
+      const info = bodyParse.top;
+      info.forEach(element => console.log(`${element.viewers} ${element.game.name}`)); // this is an array so iteration
+    } catch (e) {
+      console.log(e); // 錯誤處理
+    }
   },
 );
 

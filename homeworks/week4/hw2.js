@@ -13,9 +13,13 @@ const list = () => {
   request(
     'https://lidemy-book-store.herokuapp.com/books?_limit=20',
     (error, response, body) => {
-      const bodyParse = JSON.parse(body);
-      for (let i = 0; i < bodyParse.length; i += 1) {
-        console.log(`${bodyParse[i].id} ${bodyParse[i].name}`);
+      try {
+        const bodyParse = JSON.parse(body);
+        for (let i = 0; i < bodyParse.length; i += 1) {
+          console.log(`${bodyParse[i].id} ${bodyParse[i].name}`);
+        }
+      } catch (e) {
+        console.log(e); // 錯誤處理
       }
     },
   );
@@ -28,13 +32,17 @@ const read = (index) => {
   request(
     url,
     (error, response, body) => {
-      // console.log(url)
-      // console.log(`error: ${error}`)
-      // console.log(`response: ${response}`)
-      // console.log(`body: ${body}`)
-      // console.log(`typeof body: ${typeof body}`)
-      const bodyParse = JSON.parse(body);
-      console.log(`${bodyParse.id} ${bodyParse.name}`);
+      try {
+        // console.log(url)
+        // console.log(`error: ${error}`)
+        // console.log(`response: ${response}`)
+        // console.log(`body: ${body}`)
+        // console.log(`typeof body: ${typeof body}`)
+        const bodyParse = JSON.parse(body);
+        console.log(`${bodyParse.id} ${bodyParse.name}`);
+      } catch (e) {
+        console.log(e); // 錯誤處理
+      }
     },
   );
 };
@@ -49,8 +57,12 @@ const deleteId = (index) => {
       method: 'DELETE',
     },
     (error, response, body) => {
-      const bodyParse = JSON.parse(body);
-      console.log(`${bodyParse.id} ${bodyParse.name}`);
+      try {
+        const bodyParse = JSON.parse(body);
+        console.log(`${bodyParse.id} ${bodyParse.name}`);
+      } catch (e) {
+        console.log(e); // 錯誤處理
+      }
     },
   );
 };
@@ -90,7 +102,6 @@ const updateNewName = (index, newName) => {
       if (error !== true) {
         console.log('Sucesss');
       }
-
       // console.log(error)
     },
   );
