@@ -56,13 +56,11 @@ const deleteId = (index) => {
       uri: url,
       method: 'DELETE',
     },
-    (error, response, body) => {
-      try {
-        const bodyParse = JSON.parse(body);
-        console.log(`${bodyParse.id} ${bodyParse.name}`);
-      } catch (e) {
-        console.log(e); // 錯誤處理
+    (error) => {
+      if (error) {
+        return console.log('Delete failed: ', error);
       }
+      return console.log('Delete successful!');
     },
   );
 };
