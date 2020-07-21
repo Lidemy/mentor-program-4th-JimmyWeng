@@ -25,15 +25,14 @@ request(
     },
   },
   (error, response, body) => {
-    const bodyParse = JSON.parse(body);
-    // console.log(response);
-    // console.log(bodyParse.top);
-    const info = bodyParse.top;
-    info.forEach(element => console.log(`${element.viewers} ${element.game.name}`)); // this is an array so iteration
+    try {
+      const bodyParse = JSON.parse(body);
+      // console.log(response);
+      // console.log(bodyParse.top);
+      const info = bodyParse.top;
+      info.forEach(element => console.log(`${element.viewers} ${element.game.name}`)); // this is an array so iteration
+    } catch (e) {
+      console.log(e); // 錯誤處理
+    }
   },
 );
-
-// 希望可以跟助教請教：
-// 請問 headers 為什麼有時候用 [ ] 有時候用 { }？ 是因為 String 跟 Object 差異嗎？
-// [ ] 範例： https://github.com/request/request#support-for-har-12
-// 請問助教 headers 為什麼不能使用 limit，是我用錯方式了嗎？
