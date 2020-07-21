@@ -38,25 +38,16 @@ request(
   (error, response, body) => {
     try {
       const bodyParse = JSON.parse(body);
-      if (bodyParse.status === 404) {
+      if (bodyParse.status < 200 || bodyParse.status >= 300) {
         console.log('「找不到國家資訊」');
       } else {
-        console.log('============');
-        // console.log(bodyParse[0]);
-        console.log(`國家：${bodyParse[0].name}`);
-        console.log(`首都：${bodyParse[0].capital}`);
-        console.log(`貨幣：${bodyParse[0].currencies[0].code}`);
-        console.log(`國碼：${bodyParse[0].callingCodes[0]}`);
-        console.log('============');
-        console.log(`國家：${bodyParse[1].name}`);
-        console.log(`首都：${bodyParse[1].capital}`);
-        console.log(`貨幣：${bodyParse[1].currencies[0].code}`);
-        console.log(`國碼：${bodyParse[1].callingCodes[0]}`);
-        console.log('============');
-        console.log(`國家：${bodyParse[2].name}`);
-        console.log(`首都：${bodyParse[2].capital}`);
-        console.log(`貨幣：${bodyParse[2].currencies[0].code}`);
-        console.log(`國碼：${bodyParse[2].callingCodes[0]}`);
+        for (let i = 0; i < bodyParse.length; i += 1) {
+          console.log('============');
+          console.log(`國家： ${bodyParse[i].name}`);
+          console.log(`首都： ${bodyParse[i].capital}`);
+          console.log(`貨幣： ${bodyParse[i].currencies[0].code}`);
+          console.log(`國碼： ${bodyParse[i].callingCodes[0]}`);
+        }
       }
     } catch (e) {
       console.log(e); // 錯誤處理
