@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+
+  <title>餐廳官網</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css" />
+  <style>
+    .navbar {
+      background-color: whitesmoke;
+      height: 84px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .navbar__site-name {
+      color: #489846;
+      font-size: 36px;
+      font-family: Questrial;
+    }
+
+    .navbar__list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .navbar__list li {
+      margin-left: 36px;
+      padding: 12px 24px;
+    }
+
+    .navbar__list li.active {
+      background: #ff7286;
+    }
+
+    .navbar__list li a {
+      text-decoration: none;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar">
+    <div class="navbar__site-name">
+      Just A Bite!
+    </div>
+    <ul class='navbar__list'>
+      <li class='active'><a href="#">抽個大獎</a></li>
+      <li><a href="#">我要點餐</a></li>
+      <li><a href="#">查詢訂單</a></li>
+      <li><a href="#">常見問題</a></li>
+    </ul>
+  </nav>
+</body>
+
+</html>
