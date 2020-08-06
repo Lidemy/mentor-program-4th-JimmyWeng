@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<!-- <html class="no-js"> -->
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <title>新拖延運動報名表單</title>
+  <!-- <meta name="description" content=""> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href=""> -->
+  <style>
+    body {
+      background: rgba(0, 0, 0, 0.3)
+    }
+
+    /* 先把底圖做出來 */
+
+    /* .section {} */
+
+    .survey__all {
+      background: white;
+      max-width: 645px;
+      margin: 0 auto;
+      box-shadow: 1.8px 2.4px 5px 0 rgba(0, 0, 0, 0.3);
+      margin-top: 5%;
+      padding: 42px 54px;
+      border-top: solid 6px #fad312;
+      margin-bottom: 5%;
+    }
+
+    .survey__title {
+      /* 先忽略字型 */
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .survey__details {
+      margin-top: 35px;
+      font-size: 14px;
+      line-height: 2em;
+    }
+
+    .important__info {
+      font-size: 16px;
+      color: #e74149;
+    }
+
+    .wrapper {
+      margin-top: 55px;
+    }
+
+    .random__sentence {
+      margin-top: 12px;
+      font-size: 14px;
+    }
+
+    .survey__question-title {
+      display: inline-block;
+      font-size: 20px;
+      color: #000000;
+      margin-top: 20px;
+    }
+
+    .survey__answer {
+      margin-top: 15px;
+      width: 287px;
+      display: block;
+      border: solid 1px #d0d0d0;
+      padding: 5px;
+
+    }
+
+    .radio__input {
+      margin-top: 20px;
+    }
+
+
+    .send__button button {
+      width: 92px;
+      height: 40px;
+      border-radius: 3px;
+      border: 0px;
+      background-color: #fad312;
+    }
+
+    .send__button {
+      margin-top: 55px;
+    }
+
+    .last__message {
+      margin-top: 21px;
+    }
+
+    .footer__background {
+      height: 60px;
+      background: #000000;
+    }
+
+    .footer__content {
+      font-size: 13px;
+      color: #999999;
+      text-align: center;
+      padding: 26px 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <section class='survey__all'>
+    <!-- <div class='page__top-yellow'></div> -->
+
+    <!-- 上面的文字敘述 -->
+    <div class='survey__main'>
+      <h1 class='survey__title'>
+        新拖延運動報名表單
+      </h1>
+      <p class='survey__details'>
+        活動日期：2020/12/10 ~ 2020/12/11
+        <br>
+        活動地點：台北市大安區新生南路二段1號
+        <br>
+        <span class='important__info'>
+          *必填
+        </span>
+      </p>
+    </div>
+
+    <!-- 底下都是 form https://developer.mozilla.org/en-US/docs/Web/HTML/Element/form -->
+    <div class='wrapper'>
+      <form class='survey__form'>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>暱稱</div><span class='important__info'> *</span>
+          <input class='survey__answer' placeholder='您的回答'>
+          </input>
+        </div>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>電子郵件</div><span class='important__info'> *</span>
+          <input class='survey__answer' placeholder='您的電子郵件'>
+          </input>
+        </div>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>手機號碼</div><span class='important__info'> *</span>
+          <input class='survey__answer' placeholder='您的手機號碼'>
+          </input>
+        </div>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>報名類型</div><span class='important__info'> *</span>
+          <br>
+          <!-- <span class='circle'></span> -->
+          <input class='radio__input' type="radio">
+          躺在床上用想像力實作
+          </input>
+          <br>
+          <!-- <span class='circle'></span> -->
+          <input class='radio__input' type="radio">
+          趴在地上滑手機找現成的
+          </input>
+        </div>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>怎麼知道這個活動的？</div><span class='important__info'> *</span>
+          <input class='survey__answer' placeholder='您的回答'>
+          </input>
+        </div>
+        <div class='survey__short-question'>
+          <div class='survey__question-title'>其他</div><span class='important__info'> *</span>
+          <div class='random__sentence'>對活動的一些建議</div>
+          <input class='survey__answer' placeholder='您的回答'>
+          </input>
+        </div>
+        <div class='send__button'>
+          <button>提交</button>
+        </div>
+        <div class='last__message'>請勿透過表單送出您的密碼。</div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class='footer__background'>
+      <div class='footer__content'>
+        © 2020 © Copyright. All rights Reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
